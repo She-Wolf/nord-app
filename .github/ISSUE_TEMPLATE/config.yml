@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ✈️ Telegram-канал Норда
+    url: https://t.me/nord_free
+    about: Новости, бета-версии и поддержка
+  - name: ❓ Частые вопросы
+    url: https://she-wolf.github.io/nord-app/support.html
+    about: Как считаются дни и деньги, что делать после срыва

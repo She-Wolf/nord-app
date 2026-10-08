@@ -1,0 +1,39 @@
+name: 🐞 Ошибка
+description: Что-то работает не так
+title: "Ошибка: "
+labels: ["ошибка"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Что случилось?
+      placeholder: Например, «кнопка Сохранить не нажимается в расходах»
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      placeholder: |
+        1. Открыть настройки
+        2. ...
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что должно было произойти?
+  - type: input
+    id: device
+    attributes:
+      label: iPhone и версия iOS
+      placeholder: iPhone 16 Pro Max, iOS 26.1
+  - type: input
+    id: build
+    attributes:
+      label: Номер сборки
+      description: В приложении TestFlight под названием Норда
+      placeholder: "4"
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты или запись экрана
+      description: Можно перетащить файлы сюда

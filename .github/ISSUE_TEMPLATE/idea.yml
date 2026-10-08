@@ -1,0 +1,35 @@
+name: 💡 Идея
+description: Предложить, что добавить или изменить в Норде
+title: "Идея: "
+labels: ["идея"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо! Сначала посмотрите [похожие идеи](https://github.com/She-Wolf/nord-app/issues?q=is%3Aissue+label%3Aидея) — если такая уже есть, просто поставьте ей 👍.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Что предлагаете?
+      placeholder: Например, «показывать, на что можно потратить сэкономленные деньги»
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Чем это поможет?
+      placeholder: Как это поможет не курить или сделает приложение удобнее
+  - type: dropdown
+    id: area
+    attributes:
+      label: К чему относится
+      options:
+        - Главный экран
+        - «Хочется курить»
+        - Срыв
+        - Путь организма
+        - Норд и монстр
+        - Настройки и темы
+        - Виджеты и уведомления
+        - Друзья
+        - Другое

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="124" viewBox="0 0 120 124"><path d="M58 18c-6-6-2-13 4-14-3 4 2 6 0 10 4-2 7 2 4 5" fill="none" stroke="#B4ABC4" stroke-width="3" stroke-linecap="round"/>
+<circle cx="80" cy="10" r="4" fill="none" stroke="#B4ABC4" stroke-width="2" stroke-opacity="0.7"/>
+<path d="M36 34c-6-6-8-14-5-20 4 4 9 9 11 15z" fill="#B4ABC4"/>
+<path d="M84 34c4-4 6-9 6-13l-3 2-2-4c-2 4-5 8-7 12z" fill="#B4ABC4"/>
+<path d="M96 88c10 0 14-8 10-14" fill="none" stroke="#B4ABC4" stroke-width="5" stroke-linecap="round"/>
+<path d="M46 94v14h-8" fill="none" stroke="#B4ABC4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M74 94v14h8" fill="none" stroke="#B4ABC4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 62l-12-8M12 54l-3-4M12 54l-5 0" fill="none" stroke="#B4ABC4" stroke-width="5" stroke-linecap="round"/><path d="M96 62l12-8M108 54l3-4M108 54l5 0" fill="none" stroke="#B4ABC4" stroke-width="5" stroke-linecap="round"/>
+<path d="M60 22c-24 0-38 18-38 40 0 14 4 25 8 33l6-5 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 5c4-8 8-19 8-33 0-22-14-40-38-40z" fill="#CFC8DA"/>
+<path d="M30 40l-4-3M33 34l-3-4M88 38l4-3" fill="none" stroke="#B4ABC4" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M70 30l8 3M72 27l2 8M76 28l-1 7" fill="none" stroke="#5F5673" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="46" cy="56" r="10" fill="#FFFFFF"/>
+<circle cx="74" cy="56" r="10" fill="#FFFFFF"/>
+<circle cx="48" cy="58" r="5" fill="#5F5673"/>
+<circle cx="72" cy="58" r="5" fill="#5F5673"/>
+<circle cx="49.5" cy="56.5" r="1.4" fill="#FFFFFF"/>
+<circle cx="73.5" cy="56.5" r="1.4" fill="#FFFFFF"/>
+<path d="M35 48l20 4M85 48l-20 4" fill="none" stroke="#5F5673" stroke-width="4" stroke-linecap="round"/>
+<path d="M39 68q7 3 14 0M67 68q7 3 14 0" fill="none" stroke="#B4ABC4" stroke-width="2" stroke-linecap="round"/>
+<path d="M48 80q12-8 24 0" fill="none" stroke="#5F5673" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M57 77l3 7 3-7z" fill="#FFFFFF"/>
+</svg>

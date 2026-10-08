@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Норд — свобода от сигарет</title>
+  <meta name="description" content="Норд — приложение для iPhone, которое помогает бросить курить по методу Аллена Карра: счётчик дней и денег, никотиновый монстр, который слабеет, и белый медведь, который рядом.">
+  <meta property="og:title" content="Норд — свобода от сигарет">
+  <meta property="og:description" content="Бросить курить легко, если понять ловушку. Норд рядом каждый день.">
+  <meta property="og:image" content="https://she-wolf.github.io/nord-app/assets/screens/3_day23.png">
+  <link rel="icon" href="assets/nord.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="./"><img src="assets/nord.svg" alt="">Норд</a>
+      <div class="links">
+        <a href="#features">Что умеет</a>
+        <a href="#screens">Экраны</a>
+        <a href="#roadmap">Планы</a>
+        <a href="#feedback">Обратная связь</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1>Свобода<br>от сигарет — <span>без силы воли</span></h1>
+        <p class="lead">Норд — белый медведь из Арктики, где самый чистый воздух. Он рядом каждый день, пока никотиновый монстр слабеет и исчезает. По идеям книги Аллена Карра «Лёгкий способ бросить курить».</p>
+        <div class="buttons">
+          <a class="btn primary" id="try" href="#feedback">Попробовать</a>
+          <a class="btn secondary" href="#roadmap">Что дальше</a>
+        </div>
+        <p class="note" id="try-note">iPhone, iOS 17 и новее. Бесплатно.</p>
+      </div>
+      <div class="duo" aria-hidden="true">
+        <img class="nord" src="assets/nord-full.svg" alt="">
+        <img class="monster" src="assets/monster.svg" alt="">
+      </div>
+    </header>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Что умеет</h2>
+      <p class="sub">Всё, что нужно, чтобы бросить, — бесплатно и без регистрации.</p>
+      <div class="features">
+        <div class="card"><div class="icon">📅</div><h3>Дни и деньги</h3><p>Сколько дней свободы и сколько денег осталось у тебя, а не ушло в дым.</p></div>
+        <div class="card"><div class="icon">👾</div><h3>Никотиновый монстр</h3><p>В первые дни он огромный и требует дозу. Без неё он сдувается и к 12 неделям исчезает.</p></div>
+        <div class="card"><div class="icon">🛡️</div><h3>«Хочется курить»</h3><p>Без дыхательных упражнений: правда о никотине, «вспомни» и «одной не бывает».</p></div>
+        <div class="card"><div class="icon">🫁</div><h3>Путь организма</h3><p>Что восстанавливается и когда — по данным ВОЗ и исследований, с источниками.</p></div>
+        <div class="card"><div class="icon">🤍</div><h3>Срыв без стыда</h3><p>Честно отметить и увидеть, сколько пользы уже получено. Эти дни у тебя не отнять.</p></div>
+        <div class="card"><div class="icon">🎨</div><h3>Пастельные темы</h3><p>Бирюза, Арктика, Сиреневый и Северное сияние, светлая и тёмная тема, виджеты.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens">
+    <div class="wrap">
+      <h2>Как это выглядит</h2>
+      <p class="sub">Снимки текущей бета-версии.</p>
+      <div class="screens">
+        <figure><img src="assets/screens/2_day1.png" alt="Первый день: монстр огромный, Норд маленький" loading="lazy"><figcaption>Первый день</figcaption></figure>
+        <figure><img src="assets/screens/3_day23.png" alt="23 дня: монстр уменьшился, Норд вырос" loading="lazy"><figcaption>23 дня свободы</figcaption></figure>
+        <figure><img src="assets/screens/4_day23_aurora.png" alt="Тема «Северное сияние»" loading="lazy"><figcaption>Северное сияние</figcaption></figure>
+        <figure><img src="assets/screens/6_day60_lilac.png" alt="60 дней: монстр почти исчез" loading="lazy"><figcaption>60 дней</figcaption></figure>
+        <figure><img src="assets/screens/5_after_relapse.png" alt="После срыва: достигнутые результаты" loading="lazy"><figcaption>После срыва</figcaption></figure>
+        <figure><img src="assets/screens/8_statistics.png" alt="Статистика и история попыток" loading="lazy"><figcaption>Статистика</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="wrap">
+      <h2>Планы</h2>
+      <p class="sub">Что уже есть и что будет дальше. Подробности и обсуждение — в <a href="https://github.com/She-Wolf/nord-app/blob/main/ROADMAP.md">роадмапе</a>.</p>
+      <div class="roadmap">
+        <div class="card stage done"><div class="num">1</div><div><h3>Приложение без интернета</h3><p>Счётчик, деньги, Норд и монстр, «Хочется курить», срыв, путь организма, виджеты</p></div><span class="badge">бета в TestFlight</span></div>
+        <div class="card stage now"><div class="num">2</div><div><h3>Публикация в App Store</h3><p>Финальный логотип, описание, проверка Apple</p></div><span class="badge">сейчас</span></div>
+        <div class="card stage"><div class="num">3</div><div><h3>Аккаунт и синхронизация</h3><p>Вход через Apple, прогресс сохраняется при смене телефона</p></div><span class="badge">дальше</span></div>
+        <div class="card stage"><div class="num">4</div><div><h3>Друзья</h3><p>Рейтинг, поддержка друга после срыва готовыми фразами или своим текстом</p></div><span class="badge">дальше</span></div>
+        <div class="card stage"><div class="num">5</div><div><h3>Норд+</h3><p>Новые маскоты, тема Liquid Glass, копилка на цель, челленджи</p></div><span class="badge">потом</span></div>
+        <div class="card stage"><div class="num">6</div><div><h3>Android</h3><p>Версия для Android-телефонов</p></div><span class="badge">потом</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="feedback">
+    <div class="wrap">
+      <h2>Обратная связь</h2>
+      <p class="sub">Норд делается вместе с теми, кто бросает. Расскажите, что улучшить.</p>
+      <div class="feedback">
+        <a class="card" href="https://github.com/She-Wolf/nord-app/issues/new?template=idea.yml"><div class="emoji">💡</div><h3>Предложить идею</h3><p>Чего не хватает, что сделать по-другому.</p></a>
+        <a class="card" href="https://github.com/She-Wolf/nord-app/issues/new?template=bug.yml"><div class="emoji">🐞</div><h3>Сообщить об ошибке</h3><p>Что-то работает не так — опишите, что случилось.</p></a>
+        <a class="card" href="https://github.com/She-Wolf/nord-app/issues?q=is%3Aissue+label%3Aидея+sort%3Areactions-%2B1-desc"><div class="emoji">👍</div><h3>Голосовать за идеи</h3><p>Ставьте 👍 идеям, которые нужны вам. Популярные делаем первыми.</p></a>
+        <a class="card" href="https://t.me/nord_free"><div class="emoji">✈️</div><h3>Канал в Telegram</h3><p>Новости, бета-версии и поддержка тех, кто бросает.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Норд. Приложение не ставит диагнозов и не заменяет врача.</span>
+      <span><a href="privacy.html">Конфиденциальность</a> · <a href="support.html">Поддержка</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Публичная ссылка TestFlight. Пока её нет, кнопка ведёт в Telegram-канал, где ссылка появится первой.
+    const TESTFLIGHT_LINK = "";
+    const tryButton = document.getElementById("try");
+    const tryNote = document.getElementById("try-note");
+    if (TESTFLIGHT_LINK) {
+      tryButton.href = TESTFLIGHT_LINK;
+      tryButton.textContent = "Попробовать в TestFlight";
+    } else {
+      tryButton.href = "https://t.me/nord_free";
+      tryButton.textContent = "Попробовать бету";
+      tryNote.textContent = "Открытая бета скоро. Ссылка первой появится в Telegram-канале. iPhone, iOS 17 и новее, бесплатно.";
+    }
+  </script>
+</body>
+</html>
