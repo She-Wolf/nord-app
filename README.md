@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/nord-full.svg" width="140" alt="Норд">
+  <img src="assets/app-icon.png" width="128" alt="Норд">
 </p>
 
 <h1 align="center">Норд — свобода от сигарет</h1>

@@ -72,7 +72,7 @@ nav {
   padding: 18px 0;
 }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 20px; text-decoration: none; color: var(--text); }
-.brand img { width: 40px; height: 34px; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
 nav .links { display: flex; gap: 18px; flex-wrap: wrap; font-weight: 800; font-size: 15px; }
 nav .links a { text-decoration: none; color: var(--text2); }
 nav .links a:hover { color: var(--accent-ink); }
