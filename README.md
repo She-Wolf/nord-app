@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://t.me/nord_free"><img src="https://img.shields.io/badge/Попробовать_бету-TestFlight-0B7F77?style=for-the-badge&logo=apple&logoColor=white" alt="Попробовать бету"></a>
+  <a href="https://t.me/nord_freedom"><img src="https://img.shields.io/badge/Попробовать_бету-TestFlight-0B7F77?style=for-the-badge&logo=apple&logoColor=white" alt="Попробовать бету"></a>
   <a href="https://she-wolf.github.io/nord-app/"><img src="https://img.shields.io/badge/Сайт-she--wolf.github.io-1FA89E?style=for-the-badge" alt="Сайт"></a>
 </p>
 
@@ -35,11 +35,12 @@
 
 | | |
 |---|---|
-| 💡 **Идея** | [Предложить](https://github.com/She-Wolf/nord-app/issues/new?template=idea.yml) |
+| ✉️ **Написать** | В приложении: Настройки → «Написать нам» (без аккаунта: вопрос, идея, проблема или другое) |
+| 💡 **Идея на GitHub** | [Предложить](https://github.com/She-Wolf/nord-app/issues/new?template=idea.yml), если есть аккаунт GitHub |
 | 🐞 **Ошибка** | [Сообщить](https://github.com/She-Wolf/nord-app/issues/new?template=bug.yml) |
 | 👍 **Голосовать** | Ставьте 👍 [идеям](https://github.com/She-Wolf/nord-app/issues?q=is%3Aissue+label%3Aидея+sort%3Areactions-%2B1-desc), которые нужны вам. Популярные делаем первыми |
 | 🗺️ **Планы** | [Роадмап](ROADMAP.md) |
-| ✈️ **Новости** | [Telegram-канал](https://t.me/nord_free) |
+| ✈️ **Новости и опросы** | [Telegram-канал @nord_freedom](https://t.me/nord_freedom) |
 
 ## О репозитории
 
