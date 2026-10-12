@@ -13,6 +13,8 @@
   --button-ink: #FFFFFF;
   --lavender: #E0DBF7;
   --lavender-ink: #5D559F;
+  --sky: #D6EAF8;
+  --rose: #FBE6E2;
   --money: #E0F1D3;
   --money-ink: #3F6B2E;
   --line: rgba(120, 108, 140, 0.16);
@@ -35,6 +37,8 @@
     --button-ink: #06302C;
     --lavender: #2E2A44;
     --lavender-ink: #D2CCF7;
+    --sky: #23323F;
+    --rose: #33262A;
     --money: #2B3826;
     --money-ink: #C6E8B2;
     --line: rgba(255, 255, 255, 0.12);
@@ -128,27 +132,69 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
 .features h3 { margin: 0 0 6px; font-size: 18px; font-weight: 900; }
 .features p { margin: 0; color: var(--text2); font-weight: 600; font-size: 15px; }
 
-.screens {
-  display: flex; gap: 16px; overflow-x: auto; padding: 4px 4px 18px;
-  scroll-snap-type: x mandatory;
+/* Галерея в стиле App Store: заголовок над телефоном, цветная подложка */
+.shots {
+  display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px max(16px, calc((100vw - 1040px) / 2 + 16px)) 20px;
+  scrollbar-width: thin;
 }
-.screens figure { margin: 0; flex: 0 0 auto; scroll-snap-align: start; text-align: center; }
-.screens img { width: 220px; height: auto; border-radius: 28px; box-shadow: var(--shadow); display: block; }
-.screens figcaption { font-size: 13px; color: var(--text2); font-weight: 700; margin-top: 8px; }
+.shots:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.shot {
+  margin: 0; flex: 0 0 auto; width: 260px; scroll-snap-align: center;
+  border-radius: 28px; padding: 22px 18px 0; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+}
+.shot figcaption { text-align: center; display: grid; gap: 2px; min-height: 52px; }
+.shot figcaption b { font-size: 20px; font-weight: 900; line-height: 1.15; text-wrap: balance; }
+.shot figcaption span { font-size: 14px; font-weight: 700; color: var(--text2); }
+.s-mint { background: linear-gradient(180deg, var(--accent-soft), var(--glow1)); }
+.s-lav { background: linear-gradient(180deg, var(--lavender), var(--glow2)); }
+.s-sky { background: linear-gradient(180deg, var(--sky), var(--glow1)); }
+.s-rose { background: linear-gradient(180deg, var(--rose), var(--glow3)); }
+.device {
+  width: 200px; border-radius: 34px 34px 0 0; padding: 7px 7px 0;
+  background: #1C1A22; box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.12);
+}
+.device img { display: block; width: 100%; border-radius: 28px 28px 0 0; aspect-ratio: 1320 / 2000; object-fit: cover; object-position: top; }
 
-.roadmap { display: grid; gap: 12px; }
-.stage { display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; }
-.stage .num {
-  width: 44px; height: 44px; border-radius: 50%;
-  display: grid; place-items: center; font-weight: 900;
-  background: var(--lavender); color: var(--lavender-ink);
+/* Темы: светлая и тёмная версия палитры рядом */
+.theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.theme { margin: 0; display: grid; gap: 10px; }
+.theme .pair { position: relative; height: 330px; }
+.theme .pair img {
+  position: absolute; width: 58%; border-radius: 20px; box-shadow: var(--shadow);
+  border: 4px solid #1C1A22; background: #1C1A22;
 }
-.stage.done .num { background: var(--accent); color: var(--button-ink); }
-.stage h3 { margin: 0; font-size: 17px; font-weight: 900; }
-.stage p { margin: 2px 0 0; color: var(--text2); font-size: 14px; font-weight: 600; }
-.badge { font-size: 12px; font-weight: 900; padding: 5px 10px; border-radius: 999px; background: var(--line); color: var(--text2); white-space: nowrap; }
-.stage.done .badge { background: var(--money); color: var(--money-ink); }
-.stage.now .badge { background: var(--accent-soft); color: var(--accent-ink); }
+.theme .pair img:first-child { left: 4%; top: 0; z-index: 1; }
+.theme .pair img:last-child { right: 4%; top: 34px; }
+.theme .pair.single img { left: 21%; right: auto; top: 0; }
+.theme figcaption { display: grid; text-align: center; }
+.theme figcaption b { font-size: 17px; font-weight: 900; }
+.theme figcaption span { font-size: 14px; color: var(--text2); font-weight: 700; }
+
+/* Роадмап: дорожка со стрелкой вниз, точка «вы здесь» */
+.road { list-style: none; margin: 0; padding: 0 0 0 34px; position: relative; display: grid; gap: 14px; }
+.road::before {
+  content: ""; position: absolute; left: 11px; top: 14px; bottom: 6px; width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, var(--accent) 0 12%, var(--line) 12% 100%);
+}
+.road::after {
+  content: ""; position: absolute; left: 4px; bottom: -6px;
+  border-left: 8.5px solid transparent; border-right: 8.5px solid transparent; border-top: 12px solid var(--line);
+}
+.milestone { position: relative; }
+.milestone .dot {
+  position: absolute; left: -31px; top: 20px; width: 17px; height: 17px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--line);
+}
+.milestone .card { padding: 16px 18px; display: grid; gap: 4px; justify-items: start; }
+.milestone h3 { margin: 0; font-size: 18px; font-weight: 900; }
+.milestone p { margin: 0; color: var(--text2); font-size: 15px; font-weight: 600; max-width: 65ch; }
+.badge { font-size: 12px; font-weight: 900; padding: 4px 10px; border-radius: 999px; background: var(--line); color: var(--text2); white-space: nowrap; }
+.milestone.here .card { border: 2px solid var(--accent); background: var(--accent-soft); }
+.milestone.here .badge { background: var(--accent); color: var(--button-ink); }
+.milestone.here .dot { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 6px var(--accent-soft); animation: here 2.4s ease-in-out infinite; }
+@keyframes here { 50% { box-shadow: 0 0 0 10px transparent; } }
 
 .feedback { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
 .feedback a.card { text-decoration: none; color: var(--text); display: block; transition: transform 0.15s ease; }
@@ -171,13 +217,11 @@ footer a { color: var(--text2); }
   .hero { grid-template-columns: 1fr; padding-top: 16px; text-align: left; }
   .duo { order: -1; }
   nav .links { gap: 12px; font-size: 14px; }
-  .stage { grid-template-columns: 36px 1fr; }
-  .stage .num { width: 36px; height: 36px; }
-  .stage .badge { grid-column: 2; justify-self: start; }
-  .screens img { width: 180px; }
+  .theme .pair { height: 300px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .duo .monster { animation: none; }
+  .milestone.here .dot { animation: none; }
   html { scroll-behavior: auto; }
 }
