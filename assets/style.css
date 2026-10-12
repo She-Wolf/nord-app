@@ -131,11 +131,14 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
 .step h3 { margin: 0 0 8px; font-size: clamp(24px, 3vw, 32px); font-weight: 900; line-height: 1.15; text-wrap: balance; }
 .step p { margin: 0; color: var(--text2); font-size: 18px; font-weight: 600; max-width: 34ch; }
 .step-shot { display: none; }
-.tour-phone { position: sticky; top: calc(50vh - 310px); height: 620px; display: flex; align-items: center; justify-content: center; }
-/* Подложка под телефоном, чтобы рамка не сливалась с фоном */
+.tour-phone { isolation: isolate; position: sticky; top: calc(50vh - 310px); height: 620px; display: flex; align-items: center; justify-content: center; }
+/* Мягкое размытое облачко за телефоном, чтобы рамка не сливалась с фоном */
 .tour-phone::before {
-  content: ""; position: absolute; inset: 0 -6px; border-radius: 48px;
-  background: var(--lavender); border: 1px solid var(--line); box-shadow: var(--shadow);
+  content: ""; position: absolute; inset: 4% -30%; z-index: -1; border-radius: 50%;
+  background:
+    radial-gradient(closest-side at 38% 38%, color-mix(in srgb, var(--accent) 55%, transparent), transparent),
+    radial-gradient(closest-side at 64% 64%, color-mix(in srgb, var(--lavender-ink) 50%, transparent), transparent);
+  filter: blur(40px);
 }
 .device {
   position: relative; width: 270px; aspect-ratio: 644 / 1400; box-sizing: content-box;
