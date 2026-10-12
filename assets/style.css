@@ -122,15 +122,11 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
   -webkit-backdrop-filter: blur(12px);
 }
 
-.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
-.features .icon {
   width: 42px; height: 42px; border-radius: 14px;
   display: grid; place-items: center;
   background: var(--accent-soft); color: var(--accent-ink);
   font-size: 22px; margin-bottom: 10px;
 }
-.features h3 { margin: 0 0 6px; font-size: 18px; font-weight: 900; }
-.features p { margin: 0; color: var(--text2); font-weight: 600; font-size: 15px; }
 
 /* «Как это выглядит»: текст слева, телефон справа остаётся на месте, снимок меняется при прокрутке */
 .tour { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: start; }
