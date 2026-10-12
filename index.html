@@ -72,7 +72,7 @@
         </article>
         </div>
         <div class="tour-phone" aria-hidden="true">
-          <div class="device"><img id="tour-img" src="assets/screens/2_day1.webp" alt=""></div>
+          <div class="device" id="tour-device"><img src="assets/screens/2_day1.webp" alt="" class="on"><img src="assets/screens/3_day23.webp" alt=""><img src="assets/screens/13_craving.webp" alt=""><img src="assets/screens/14_timeline.webp" alt=""><img src="assets/screens/5_after_relapse.webp" alt=""></div>
         </div>
       </div>
     </div>
@@ -149,23 +149,28 @@
   </footer>
 
   <script>
-    // Телефон рядом с текстом: снимок меняется, когда до шага доходит прокрутка.
+    // Телефон рядом с текстом: все снимки уже загружены и лежат друг на друге,
+    // нужный показывается, когда верх текста поднимается чуть выше нижней границы телефона.
     (function () {
-      const img = document.getElementById("tour-img");
-      const steps = document.querySelectorAll(".step");
-      if (!img || !("IntersectionObserver" in window)) return;
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          steps.forEach((s) => s.classList.toggle("active", s === entry.target));
-          const next = entry.target.dataset.shot;
-          if (img.getAttribute("src") === next) return;
-          img.classList.add("swap");
-          setTimeout(() => { img.src = next; img.classList.remove("swap"); }, 180);
-        });
-      }, { rootMargin: "-45% 0px -45% 0px" });
-      steps.forEach((s) => observer.observe(s));
-      steps[0].classList.add("active");
+      const device = document.getElementById("tour-device");
+      const steps = Array.from(document.querySelectorAll(".step"));
+      if (!device || !steps.length) return;
+      const shots = Array.from(device.querySelectorAll("img"));
+      let current = -1, ticking = false;
+      function update() {
+        ticking = false;
+        if (getComputedStyle(device.parentElement).display === "none") return;
+        const trigger = device.getBoundingClientRect().bottom - 60;
+        let index = 0;
+        steps.forEach((step, i) => { if (step.querySelector("h3").getBoundingClientRect().top < trigger) index = i; });
+        if (index === current) return;
+        current = index;
+        shots.forEach((img, i) => img.classList.toggle("on", i === index));
+        steps.forEach((step, i) => step.classList.toggle("active", i === index));
+      }
+      window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+      window.addEventListener("resize", update);
+      update();
     })();
 
     // Публичная ссылка TestFlight. Пока её нет, кнопка ведёт в Telegram-канал, где ссылка появится первой.

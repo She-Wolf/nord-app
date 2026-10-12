@@ -131,13 +131,19 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
 .step h3 { margin: 0 0 8px; font-size: clamp(24px, 3vw, 32px); font-weight: 900; line-height: 1.15; text-wrap: balance; }
 .step p { margin: 0; color: var(--text2); font-size: 18px; font-weight: 600; max-width: 34ch; }
 .step-shot { display: none; }
-.tour-phone { position: sticky; top: calc(50vh - 290px); height: 580px; display: flex; align-items: center; justify-content: center; }
-.device {
-  width: 270px; border-radius: 44px; padding: 9px;
-  background: #1C1A22; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+.tour-phone { position: sticky; top: calc(50vh - 310px); height: 620px; display: flex; align-items: center; justify-content: center; }
+/* Подложка под телефоном, чтобы рамка не сливалась с фоном */
+.tour-phone::before {
+  content: ""; position: absolute; inset: 0 -6px; border-radius: 48px;
+  background: var(--lavender); border: 1px solid var(--line); box-shadow: var(--shadow);
 }
-.device img { display: block; width: 100%; height: auto; border-radius: 36px; aspect-ratio: 644 / 1400; transition: opacity .18s ease; }
-.device img.swap { opacity: 0; }
+.device {
+  position: relative; width: 270px; aspect-ratio: 644 / 1400; box-sizing: content-box;
+  border-radius: 44px; padding: 9px; background: #1C1A22;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+.device img { position: absolute; inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 36px; opacity: 0; }
+.device img.on { opacity: 1; }
 
 @media (max-width: 760px) {
   /* На телефоне — снимок у каждого шага, без закреплённого экрана */
