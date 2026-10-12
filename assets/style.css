@@ -152,22 +152,23 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
 .s-sky { background: linear-gradient(180deg, var(--sky), var(--glow1)); }
 .s-rose { background: linear-gradient(180deg, var(--rose), var(--glow3)); }
 .device {
-  width: 200px; border-radius: 34px 34px 0 0; padding: 7px 7px 0;
-  background: #1C1A22; box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.12);
+  width: 200px; border-radius: 34px; padding: 7px; margin-bottom: 22px;
+  background: #1C1A22; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
 }
-.device img { display: block; width: 100%; border-radius: 28px 28px 0 0; aspect-ratio: 1320 / 2000; object-fit: cover; object-position: top; }
+.device img { display: block; width: 100%; height: auto; border-radius: 27px; aspect-ratio: 644 / 1400; }
 
 /* Темы: светлая и тёмная версия палитры рядом */
 .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
 .theme { margin: 0; display: grid; gap: 10px; }
-.theme .pair { position: relative; height: 330px; }
+.theme .pair { position: relative; height: 300px; max-width: 280px; width: 100%; margin-inline: auto; }
 .theme .pair img {
   position: absolute; width: 58%; border-radius: 20px; box-shadow: var(--shadow);
   border: 4px solid #1C1A22; background: #1C1A22;
 }
-.theme .pair img:first-child { left: 4%; top: 0; z-index: 1; }
-.theme .pair img:last-child { right: 4%; top: 34px; }
-.theme .pair.single img { left: 21%; right: auto; top: 0; }
+.theme .pair img { width: 52%; }
+.theme .pair img:first-child { left: 0; top: 0; z-index: 1; }
+.theme .pair img:last-child { right: 0; top: 24px; }
+.theme .pair.single img { left: 24%; right: auto; top: 0; }
 .theme figcaption { display: grid; text-align: center; }
 .theme figcaption b { font-size: 17px; font-weight: 900; }
 .theme figcaption span { font-size: 14px; color: var(--text2); font-weight: 700; }
@@ -180,7 +181,7 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
 }
 .road::after {
   content: ""; position: absolute; left: 4px; bottom: -6px;
-  border-left: 8.5px solid transparent; border-right: 8.5px solid transparent; border-top: 12px solid var(--line);
+  border-left: 8.5px solid transparent; border-right: 8.5px solid transparent; border-top: 12px solid var(--text2); opacity: .5;
 }
 .milestone { position: relative; }
 .milestone .dot {
@@ -217,7 +218,7 @@ footer a { color: var(--text2); }
   .hero { grid-template-columns: 1fr; padding-top: 16px; text-align: left; }
   .duo { order: -1; }
   nav .links { gap: 12px; font-size: 14px; }
-  .theme .pair { height: 300px; }
+  .theme .pair { height: 340px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

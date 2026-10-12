@@ -15,9 +15,9 @@
 </p>
 
 <p align="center">
-  <img src="assets/screens/2_day1.png" width="200" alt="Первый день">
-  <img src="assets/screens/3_day23.png" width="200" alt="23 дня">
-  <img src="assets/screens/4_day23_aurora.png" width="200" alt="Северное сияние">
+  <img src="assets/screens/2_day1.webp" width="200" alt="Первый день">
+  <img src="assets/screens/3_day23.webp" width="200" alt="23 дня">
+  <img src="assets/screens/4_day23_aurora.webp" width="200" alt="Северное сияние">
 </p>
 
 ## Что умеет
