@@ -63,15 +63,38 @@
   <section id="screens">
     <div class="wrap">
       <h2>Как это выглядит</h2>
-      <p class="sub">Главное в приложении на шести экранах.</p>
-    </div>
-    <div class="shots" tabindex="0" aria-label="Экраны приложения, листаются вбок">
-      <figure class="shot s-mint"><figcaption><b>Каждый день без сигарет</b><span>на счету</span></figcaption><div class="device"><img src="assets/screens/2_day1.webp" alt="Первый день: огромный монстр и маленький Норд, счётчик 1 день" loading="lazy"></div></figure>
-      <figure class="shot s-lav"><figcaption><b>Монстр слабеет</b><span>с каждым днём свободы</span></figcaption><div class="device"><img src="assets/screens/3_day23.webp" alt="23 дня: монстр уменьшился, Норд вырос" loading="lazy"></div></figure>
-      <figure class="shot s-sky"><figcaption><b>Деньги остаются</b><span>у тебя, а не уходят в дым</span></figcaption><div class="device"><img src="assets/screens/8_statistics.webp" alt="Статистика: дни, деньги, лучшая попытка" loading="lazy"></div></figure>
-      <figure class="shot s-rose"><figcaption><b>Срыв — не конец</b><span>история и деньги сохраняются</span></figcaption><div class="device"><img src="assets/screens/5_after_relapse.webp" alt="После срыва счёт начинается заново, Норд снова маленький" loading="lazy"></div></figure>
-      <figure class="shot s-mint"><figcaption><b>Норд рядом</b><span>с первой минуты</span></figcaption><div class="device"><img src="assets/screens/1_onboarding.webp" alt="Знакомство с Нордом: когда была выкурена последняя сигарета" loading="lazy"></div></figure>
-      <figure class="shot s-lav"><figcaption><b>Пара вопросов</b><span>и можно начинать</span></figcaption><div class="device"><img src="assets/screens/7_expenses.webp" alt="Расходы: валюта, цена пачки, сигарет в день" loading="lazy"></div></figure>
+      <p class="sub">Главное в приложении — листайте вниз.</p>
+      <div class="tour">
+        <div class="tour-steps">
+        <article class="step" data-shot="assets/screens/2_day1.webp" data-alt="Первый день: огромный монстр и маленький Норд">
+          <img class="step-shot" src="assets/screens/2_day1.webp" alt="Первый день: огромный монстр и маленький Норд" loading="lazy">
+          <div><h3>Каждый день без сигарет на счету</h3><p>Счётчик в кольце, деньги, которые остаются у тебя, и ближайшее улучшение в организме — на одном экране.</p></div>
+        </article>
+        <article class="step" data-shot="assets/screens/3_day23.webp" data-alt="23 дня: монстр уменьшился, Норд вырос">
+          <img class="step-shot" src="assets/screens/3_day23.webp" alt="23 дня: монстр уменьшился, Норд вырос" loading="lazy">
+          <div><h3>Монстр слабеет</h3><p>В первые дни никотиновый монстр огромный и требует дозу. Без неё он сдувается и к 12 неделям исчезает, а Норд растёт.</p></div>
+        </article>
+        <article class="step" data-shot="assets/screens/8_statistics.webp" data-alt="Статистика: дни, деньги, лучшая попытка">
+          <img class="step-shot" src="assets/screens/8_statistics.webp" alt="Статистика: дни, деньги, лучшая попытка" loading="lazy">
+          <div><h3>Деньги и дни сохраняются</h3><p>Вся история попыток, лучшая серия и сумма за всё время. Видно, сколько уже получено.</p></div>
+        </article>
+        <article class="step" data-shot="assets/screens/5_after_relapse.webp" data-alt="После срыва счёт начинается заново">
+          <img class="step-shot" src="assets/screens/5_after_relapse.webp" alt="После срыва счёт начинается заново" loading="lazy">
+          <div><h3>Срыв — не конец</h3><p>Отметить честно, без стыда. Счёт начнётся заново, но история и деньги никуда не денутся.</p></div>
+        </article>
+        <article class="step" data-shot="assets/screens/1_onboarding.webp" data-alt="Знакомство с Нордом">
+          <img class="step-shot" src="assets/screens/1_onboarding.webp" alt="Знакомство с Нордом" loading="lazy">
+          <div><h3>Норд рядом с первой минуты</h3><p>Белый медведь из Арктики встречает и спрашивает, когда была выкурена последняя сигарета.</p></div>
+        </article>
+        <article class="step" data-shot="assets/screens/7_expenses.webp" data-alt="Расходы: валюта, цена пачки, сигарет в день">
+          <img class="step-shot" src="assets/screens/7_expenses.webp" alt="Расходы: валюта, цена пачки, сигарет в день" loading="lazy">
+          <div><h3>Пара вопросов — и можно начинать</h3><p>Валюта, цена пачки и сколько сигарет в день. Не знаешь — Норд подставит средние значения.</p></div>
+        </article>
+        </div>
+        <div class="tour-phone" aria-hidden="true">
+          <div class="device"><img id="tour-img" src="assets/screens/2_day1.webp" alt=""></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -119,7 +142,7 @@
         </li>
         <li class="milestone">
           <span class="dot" aria-hidden="true"></span>
-          <div class="card"><span class="badge">потом</span><h3>Норд+</h3><p>Новые маскоты, челленджи с друзьями и копилка на цель. Выбираешь мечту — отпуск, велосипед, наушники. Раз в неделю Норд напоминает перевести сэкономленные деньги на свой счёт, ты отмечаешь «перевёл», и копилка наполняется. Видно, сколько осталось и когда цель будет твоей. Банк подключать не нужно.</p></div>
+          <div class="card"><span class="badge">потом</span><h3>Норд+</h3><p>Новые маскоты, челленджи с друзьями и копилка на цель.</p></div>
         </li>
       </ol>
     </div>
@@ -146,6 +169,25 @@
   </footer>
 
   <script>
+    // Телефон рядом с текстом: снимок меняется, когда до шага доходит прокрутка.
+    (function () {
+      const img = document.getElementById("tour-img");
+      const steps = document.querySelectorAll(".step");
+      if (!img || !("IntersectionObserver" in window)) return;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          steps.forEach((s) => s.classList.toggle("active", s === entry.target));
+          const next = entry.target.dataset.shot;
+          if (img.getAttribute("src") === next) return;
+          img.classList.add("swap");
+          setTimeout(() => { img.src = next; img.classList.remove("swap"); }, 180);
+        });
+      }, { rootMargin: "-45% 0px -45% 0px" });
+      steps.forEach((s) => observer.observe(s));
+      steps[0].classList.add("active");
+    })();
+
     // Публичная ссылка TestFlight. Пока её нет, кнопка ведёт в Telegram-канал, где ссылка появится первой.
     const TESTFLIGHT_LINK = "";
     const tryButton = document.getElementById("try");
