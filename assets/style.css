@@ -122,11 +122,6 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
   -webkit-backdrop-filter: blur(12px);
 }
 
-  width: 42px; height: 42px; border-radius: 14px;
-  display: grid; place-items: center;
-  background: var(--accent-soft); color: var(--accent-ink);
-  font-size: 22px; margin-bottom: 10px;
-}
 
 /* «Как это выглядит»: текст слева, телефон справа остаётся на месте, снимок меняется при прокрутке */
 .tour { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: start; }
