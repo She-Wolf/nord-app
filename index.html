@@ -163,9 +163,8 @@
       const steps = Array.from(document.querySelectorAll(".step"));
       if (!device || !steps.length) return;
       const shots = Array.from(device.querySelectorAll("img"));
-      let current = -1, ticking = false;
+      let current = -1;
       function update() {
-        ticking = false;
         if (getComputedStyle(device.parentElement).display === "none") return;
         const trigger = device.getBoundingClientRect().bottom - 60;
         let index = 0;
@@ -175,8 +174,10 @@
         shots.forEach((img, i) => img.classList.toggle("on", i === index));
         steps.forEach((step, i) => step.classList.toggle("active", i === index));
       }
-      window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+      window.addEventListener("scroll", update, { passive: true });
       window.addEventListener("resize", update);
+      window.addEventListener("load", update);
+      if ("ResizeObserver" in window) new ResizeObserver(update).observe(document.body);
       update();
     })();
 

@@ -155,6 +155,8 @@ section .sub { color: var(--text2); margin: 0 0 24px; font-weight: 600; font-siz
 
 
 /* «Как это выглядит»: текст слева, телефон справа остаётся на месте, снимок меняется при прокрутке */
+/* Облачко за телефоном не должно давать прокрутку вбок; clip не ломает «прилипание» телефона */
+#features { overflow-x: clip; }
 .tour { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: start; }
 .tour-steps { display: grid; gap: 0; }
 .step { min-height: 62vh; display: flex; align-items: center; opacity: .45; transition: opacity .3s ease; }
@@ -257,3 +259,4 @@ footer a { color: var(--text2); }
   .milestone.here .dot { animation: none; }
   html { scroll-behavior: auto; }
 }
+
