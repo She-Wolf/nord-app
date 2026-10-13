@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://t.me/nord_freedom"><img src="https://img.shields.io/badge/Попробовать_бету-TestFlight-0B7F77?style=for-the-badge&logo=apple&logoColor=white" alt="Попробовать бету"></a>
+  <a href="https://testflight.apple.com/join/RJz8dRXB"><img src="https://img.shields.io/badge/Попробовать_бету-TestFlight-0B7F77?style=for-the-badge&logo=apple&logoColor=white" alt="Попробовать бету"></a>
   <a href="https://she-wolf.github.io/nord-app/"><img src="https://img.shields.io/badge/Сайт-she--wolf.github.io-1FA89E?style=for-the-badge" alt="Сайт"></a>
 </p>
 
