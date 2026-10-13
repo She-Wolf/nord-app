@@ -55,31 +55,23 @@
     <div class="wrap">
       <h2>Что умеет</h2>
       <p class="sub">Всё, что нужно, чтобы бросить, — бесплатно и без регистрации.</p>
-      <div class="tour">
-        <div class="tour-steps">
-        <article class="step" data-shot="assets/screens/2_day1.webp">
-          <img class="step-shot" src="assets/screens/2_day1.webp" alt="Главный экран: счётчик дней и сэкономленные деньги" loading="lazy">
-          <div><h3>Дни и деньги</h3><p>Сколько дней свободы и сколько денег осталось у тебя, а не ушло в дым. Счётчик есть и в виджете на экране телефона.</p></div>
-        </article>
-        <article class="step" data-shot="assets/screens/3_day23.webp">
-          <img class="step-shot" src="assets/screens/3_day23.webp" alt="23 дня: монстр уменьшился, Норд вырос" loading="lazy">
-          <div><h3>Никотиновый монстр</h3><p>В первые дни он огромный и требует дозу. Без неё он сдувается и к 12 неделям исчезает, а Норд растёт.</p></div>
-        </article>
-        <article class="step" data-shot="assets/screens/13_craving.webp">
-          <img class="step-shot" src="assets/screens/13_craving.webp" alt="Экран «Хочется курить» с карточкой" loading="lazy">
-          <div><h3>«Хочется курить»</h3><p>Без дыхательных упражнений: правда о никотине, «вспомни» и «одной не бывает». Тяга проходит, монстр остаётся голодным.</p></div>
-        </article>
-        <article class="step" data-shot="assets/screens/14_timeline.webp">
-          <img class="step-shot" src="assets/screens/14_timeline.webp" alt="Путь организма: что уже восстановилось" loading="lazy">
-          <div><h3>Путь организма</h3><p>Что восстанавливается и когда — по данным ВОЗ и исследований, с источниками. Приходит уведомление, когда организму становится лучше.</p></div>
-        </article>
-        <article class="step" data-shot="assets/screens/5_after_relapse.webp">
-          <img class="step-shot" src="assets/screens/5_after_relapse.webp" alt="После срыва счёт начинается заново" loading="lazy">
-          <div><h3>Срыв без стыда</h3><p>Честно отметить и начать заново. История попыток и сэкономленные деньги никуда не денутся.</p></div>
-        </article>
-        </div>
-        <div class="tour-phone" aria-hidden="true">
-          <div class="device" id="tour-device"><img src="assets/screens/2_day1.webp" alt="" class="on"><img src="assets/screens/3_day23.webp" alt=""><img src="assets/screens/13_craving.webp" alt=""><img src="assets/screens/14_timeline.webp" alt=""><img src="assets/screens/5_after_relapse.webp" alt=""></div>
+      <div class="pin" id="tour" style="--steps: 5">
+        <div class="pin-stage">
+          <div class="pin-card">
+            <div class="pin-copy">
+              <div class="pin-texts">
+            <article class="pin-step on" aria-hidden="false"><span class="pin-num">1 / 5</span><h3>Дни и деньги</h3><p>Сколько дней свободы и сколько денег осталось у тебя, а не ушло в дым. Счётчик есть и в виджете на экране телефона.</p></article>
+            <article class="pin-step" aria-hidden="true"><span class="pin-num">2 / 5</span><h3>Никотиновый монстр</h3><p>В первые дни он огромный и требует дозу. Без неё он сдувается и к 12 неделям исчезает, а Норд растёт.</p></article>
+            <article class="pin-step" aria-hidden="true"><span class="pin-num">3 / 5</span><h3>«Хочется курить»</h3><p>Без дыхательных упражнений: правда о никотине, «вспомни» и «одной не бывает». Тяга проходит, монстр остаётся голодным.</p></article>
+            <article class="pin-step" aria-hidden="true"><span class="pin-num">4 / 5</span><h3>Путь организма</h3><p>Что восстанавливается и когда — по данным ВОЗ и исследований, с источниками. Приходит уведомление, когда организму становится лучше.</p></article>
+            <article class="pin-step" aria-hidden="true"><span class="pin-num">5 / 5</span><h3>Срыв без стыда</h3><p>Честно отметить и начать заново. История попыток и сэкономленные деньги никуда не денутся.</p></article>
+              </div>
+              <div class="pin-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="tour-phone">
+              <div class="device" id="tour-device"><img src="assets/screens/2_day1.webp" alt="Главный экран: счётчик дней и сэкономленные деньги" class="on"><img src="assets/screens/3_day23.webp" alt="23 дня: монстр уменьшился, Норд вырос"><img src="assets/screens/13_craving.webp" alt="Экран «Хочется курить» с карточкой"><img src="assets/screens/14_timeline.webp" alt="Путь организма: что уже восстановилось"><img src="assets/screens/5_after_relapse.webp" alt="После срыва счёт начинается заново"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -156,28 +148,27 @@
   </footer>
 
   <script>
-    // Телефон рядом с текстом: все снимки уже загружены и лежат друг на друге,
-    // нужный показывается, когда верх текста поднимается чуть выше нижней границы телефона.
+    // «Что умеет»: карточка закреплена, пока идёт прокрутка через блок; внутри меняются текст и экран.
     (function () {
-      const device = document.getElementById("tour-device");
-      const steps = Array.from(document.querySelectorAll(".step"));
-      if (!device || !steps.length) return;
-      const shots = Array.from(device.querySelectorAll("img"));
-      let current = -1;
+      const pin = document.getElementById("tour");
+      if (!pin) return;
+      const texts = Array.from(pin.querySelectorAll(".pin-step"));
+      const shots = Array.from(pin.querySelectorAll("#tour-device img"));
+      const dots = Array.from(pin.querySelectorAll(".pin-dots i"));
+      let current = 0;
       function update() {
-        if (getComputedStyle(device.parentElement).display === "none") return;
-        const trigger = device.getBoundingClientRect().bottom - 60;
-        let index = 0;
-        steps.forEach((step, i) => { if (step.querySelector("h3").getBoundingClientRect().top < trigger) index = i; });
+        const rect = pin.getBoundingClientRect();
+        const run = pin.offsetHeight - window.innerHeight;
+        const progress = run > 0 ? Math.min(Math.max(-rect.top / run, 0), 0.9999) : 0;
+        const index = Math.floor(progress * texts.length);
         if (index === current) return;
         current = index;
-        shots.forEach((img, i) => img.classList.toggle("on", i === index));
-        steps.forEach((step, i) => step.classList.toggle("active", i === index));
+        [texts, shots, dots].forEach((list) => list.forEach((el, i) => el.classList.toggle("on", i === index)));
+        texts.forEach((el, i) => el.setAttribute("aria-hidden", String(i !== index)));
       }
       window.addEventListener("scroll", update, { passive: true });
       window.addEventListener("resize", update);
       window.addEventListener("load", update);
-      if ("ResizeObserver" in window) new ResizeObserver(update).observe(document.body);
       update();
     })();
 
